@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="post" action="/save_model_name" enctype="multipart/form-data">
+    <input type='submit' name = 'deep_learning_model' value='ssd keras'>
+    <input type='submit' name='deep_learning_model' value='yolo'>
+    <input type='submit' name='deep_learning_model' value='tesseract'>
+</form>
+{% endblock %}
