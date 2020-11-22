@@ -4,25 +4,14 @@
 </head>
 <body onload="init()" ondragover="return false">
 <div>
+    <p ><img src="{{  url_for('video_feed') }}" id="target_image"
+             style="position: absolute; left: 300px" ></p>
     <form method="post" action="/create_metadata" enctype="multipart/form-data">
-        <input type="submit" value="次の画像へ">
+        <input type="submit" name="add_box_data" value="座標登録">
+        <textarea cols="25" rows="6" id="axis_list" name="axis_data_for_draw_boxes"
+              style="overflow:auto;">
+        </textarea>
     </form>
-    <form method="post" action="/save_metadata_to_local" enctype="multipart/form-data">
-        <input type="submit" value="終了">
-    </form>
-    X座標：<input type="text" id="tx1">
-    Y座標：<input type="text" id="ty1">
-    <p>画像(x座標)：<input type="text" id="image_axis_x">
-       画像(y座標)：<input type="text" id="image_axis_y">
-       画像(幅)：<input type="text" id="image_axis_width">
-       画像(高さ)：<input type="text" id="image_axis_height">
-    </p>
-    {% if img_url %}
-        <p ><img src="{{ img_url('image_feed') }}" id="target_image"
-                 style="position: absolute; left: 300px" ></p>
-    {% endif %}
-    <textarea cols="25" rows="6" id="axis_list" name="gazou_youso" style="overflow:auto;">
-    </textarea>
 </div>
 </body>
 </html>

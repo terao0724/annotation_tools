@@ -57,10 +57,10 @@ function get_down_value()
     }
     if(flag % 2 == 0){
     axis_list = []
-    axis_list.push(["start", annotation_x, annotation_y])
+    axis_list.push([annotation_x, annotation_y])
     }
     else if(flag % 2 == 1){
-    axis_list.push(["end", annotation_x, annotation_y])
+    axis_list.push([annotation_x, annotation_y])
     document.getElementById("axis_list").value = axis_list
     }
     flag = flag + 1
